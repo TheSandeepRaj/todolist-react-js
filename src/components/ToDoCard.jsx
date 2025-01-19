@@ -1,14 +1,35 @@
 import React from "react";
-import TodoList from "./ToDoList";
 
-export default function ToDoCard(props) {
-  const { children } = props;
+export default function ToDoCard({
+  todo,
+  todoIndex,
+  handleDeleteTodo,
+  toggleEditTodo,
+  handleEditChange,
+}) {
   return (
     <li className="todoItem">
-      {children}
+      {todo.isEditing ? (
+        <input
+          type="text"
+          value={todo.text}
+          onChange={(e) => handleEditChange(todoIndex, e.target.value)}
+        />
+      ) : (
+        <p>{todo.text}</p>
+      )}
 
-      <i className="fa-solid fa-pen-to-square"></i>
-      <i className="fa-solid fa-trash"></i>
+      <button onClick={() => toggleEditTodo(todoIndex)}>
+        {todo.isEditing ? (
+          <i className="fa-solid fa-floppy-disk"></i>
+        ) : (
+          <i className="fa-solid fa-pen-to-square"></i>
+        )}
+      </button>
+
+      <button onClick={() => handleDeleteTodo(todoIndex)}>
+        <i className="fa-solid fa-trash"></i>
+      </button>
     </li>
   );
 }
