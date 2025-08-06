@@ -1,8 +1,7 @@
 # 📝 ToDo List App (React.js)
 
-A minimalist ToDo List application developed with **React.js**.  
-Currently, it showcases a static list of tasks. Upcoming updates will enable users to add, edit, and delete tasks for enhanced interactivity.
-It currently displays a list of hardcoded tasks and will soon support adding, editing, and deleting tasks.
+A minimalist and fully functional ToDo List application built with **React.js**.  
+This app allows users to **add**, **edit**, and **delete** tasks, and it **saves data locally** in the browser using **localStorage**..
 
 ## 🔧 Features
 
@@ -39,7 +38,8 @@ It currently displays a list of hardcoded tasks and will soon support adding, ed
 
 ## 🌐 Live Demo
 
-Coming soon...
+Check out the live version here:  
+<a href="https://todoapp-reactj.netlify.app/" target="_blank">https://todoapp-reactj.netlify.app/</a>
 
 ## 📄 License
 
